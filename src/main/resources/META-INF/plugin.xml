@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>com.example.branchcoverage</id>
+    <name>Enhanced Branch Coverage</name>
+    <vendor>ExampleCorp</vendor>
+    <description>Displays detailed branch coverage for unit tests in IntelliJ.</description>
+    <version>1.0</version>
+
+    <!-- Extend the coverage engine -->
+    <actions>
+        <action id="BranchCoveragePlugin.ShowBranchCoverage"
+                class="demo.ShowBranchCoverageAction"
+                text="Show Enhanced Branch Coverage"
+                description="Displays detailed branch coverage in the editor">
+            <add-to-group group-id="RunMenu" anchor="after" relative-to-action="RunClass"/>
+        </action>
+    </actions>
+
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.coverage</depends>
+</idea-plugin>
